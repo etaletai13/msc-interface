@@ -6,3 +6,10 @@ node_js: 8.9.0
 before_install:
 - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.7.0
 - export PATH="$HOME/.yarn/bin:$PATH"
+deploy:
+  provider: npm
+  email: parker.casey@gmail.com
+  api_key: ${NPM_TOKEN}
+  on:
+    repo: etaletai13/msc-interface
+    branch: release
